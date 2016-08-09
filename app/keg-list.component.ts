@@ -16,7 +16,9 @@ import { EditKegComponent } from './edit-keg.component';
   [class.expensive]="currentKeg.price>10"
   [class.moderate]="currentKeg.price>3 && currentKeg.price<=10"
   [class.cheap]="currentKeg.price<=3"
-  [class.strong]="currentKeg.content>10">
+  [class.strong]="currentKeg.content>10"
+  [class.selected]="currentKeg === selectedKeg">
+
   </keg-display>
   <new-keg (onNewKeg)="addKeg($event)"></new-keg>
   <edit-keg *ngIf="selectedKeg" [keg]="selectedKeg"></edit-keg>
